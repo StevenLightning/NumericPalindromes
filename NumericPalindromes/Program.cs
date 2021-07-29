@@ -93,7 +93,12 @@ namespace NumericPalindromes
             }
 
             // Print sorted list of numbers to file
-            string outputPath = $"{Path.GetDirectoryName(inputPath)}\\{Path.GetFileNameWithoutExtension(inputPath)}_output.txt";
+            string directory = Path.GetDirectoryName(inputPath);
+            if (directory != "")
+            {
+                directory += "\\";
+            }
+            string outputPath = $"{directory}{Path.GetFileNameWithoutExtension(inputPath)}_output.txt";
             try
             {
                 StreamWriter writer = new StreamWriter(outputPath);
