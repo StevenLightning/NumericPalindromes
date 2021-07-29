@@ -42,9 +42,9 @@ namespace NumericPalindromes
         {
             // Get the input file path from either the command arguments or the console.
             string inputPath = "";
-            if (args.Length > 1 && File.Exists(args[0]))
+            if (args.Length > 0 && File.Exists(args[0]))
             {
-                inputPath = args[1];
+                inputPath = args[0];
             }
             else
             {
